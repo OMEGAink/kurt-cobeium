@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "kurt_cobeium",
+	"version": "${version}",
+	"name": "Kurt Cobeium",
+	"description": "Made strongest metal out of living things",
+	"authors": [
+		"OmegaDevArt!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/kurt_cobeium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.albertomega.kurtcobeium.KurtCobeium"
+		],
+		"fabric-datagen": [
+			"net.albertomega.kurtcobeium.KurtCobeiumDataGenerator"
+		],
+		"client": [
+			"net.albertomega.kurtcobeium.KurtCobeiumClient"
+		]
+	},
+	"mixins": [
+		"kurt-cobeium.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

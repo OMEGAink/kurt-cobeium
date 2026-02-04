@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "kurt_cobeium:block/test_block"
+    }
+  }
+}
