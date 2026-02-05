@@ -116,5 +116,7 @@ public class PushWand extends Item{
     @Override
     public void inventoryTick(ItemStack itemStack, ServerWorld serverWorld, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
         super.inventoryTick(itemStack, serverWorld, entity, equipmentSlot);
+
+
     }
 }

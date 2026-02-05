@@ -1,10 +1,13 @@
 package net.albertomega.kurtcobeium.worlds;
 
 import net.albertomega.kurtcobeium.KurtCobeium;
+import net.albertomega.kurtcobeium.render.world.WorldRender;
 import net.albertomega.kurtcobeium.worlds.all.SlowZone;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -20,17 +23,21 @@ public class GlobalWorldLogic {
         //0===========================================================================================================================0
         ServerTickEvents.END_WORLD_TICK.register(world -> {
 
+            ClientWorld worldClient = MinecraftClient.getInstance().world;
+
             //Server logic
             if (!world.isClient()){
                 assert world.getServer() != null;
 
                 //Slow_Zone
-                SlowZone.begin(world);
+                //SlowZone.begin(world);
 
             }
 
             //Client logic
             if (world.isClient()){
+
+                WorldRender.renderElCUbe();
 
             }
 

@@ -48,7 +48,7 @@ public class ModItems {
 
         Item registered_item = Registry.register(Registries.ITEM, key , item);
 
-        items_list.add(registered_item); //Add item to the list
+        items_list.add(registered_item); //Add item to the list 1
         return registered_item;
 
     }
